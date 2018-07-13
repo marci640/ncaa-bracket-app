@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from './Header';
+import SearchBox from './SearchBox';
 import NonClinicMap from './NonClinicMap';
 
 class WomensHealthApp extends React.Component {
@@ -13,8 +15,20 @@ class WomensHealthApp extends React.Component {
     this.setState({infoIndex: a})
   }
 
+  searchByLocation = (location) => {
+    if (!location) {
+      return 'Enter a valid value'
+    }
+    fetch('http://localhost:3000/api/v1/non_clinics/' + location).then(results => {
+        return results.json();
+    }).then(data => {
+      let nonClinics = data;
+      this.setState({nonClinics: nonClinics});
+    })
+  };
+
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/non_clinics').then(results => {
+    fetch('http://localhost:3000/api/v1/non_clinics/AL').then(results => {
         return results.json();
     }).then(data => {
       let nonClinics = data;
@@ -25,6 +39,8 @@ class WomensHealthApp extends React.Component {
   render() {
     return (
       <div>
+        <Header />
+        <SearchBox searchByLocation={this.searchByLocation} />
         <NonClinicMap 
           isOpen={this.state.isOpen}
           nonClinics={this.state.nonClinics}

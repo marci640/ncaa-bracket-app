@@ -9,7 +9,7 @@ class NonClinicMap extends Component {
     const GoogleMapExample = withGoogleMap(props => (
       <GoogleMap
         defaultCenter = { { lat: 30.6878086, lng: -88.17402109999999 } }
-        defaultZoom = { 13 }
+        defaultZoom = { 8 }
       >
         {this.props.nonClinics.map(clinic => (
           <Marker
