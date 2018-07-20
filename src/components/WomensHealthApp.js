@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import SearchBox from './SearchBox';
 import NonClinicMap from './NonClinicMap';
+import CenterDetails from './CenterDetails';
 
 class WomensHealthApp extends React.Component {
   state = {
@@ -41,6 +42,9 @@ class WomensHealthApp extends React.Component {
       <div>
         <Header />
         <SearchBox searchByLocation={this.searchByLocation} />
+        {
+          this.state.isOpen && <CenterDetails infoIndex={this.state.infoIndex}/>
+        }
         <NonClinicMap 
           isOpen={this.state.isOpen}
           nonClinics={this.state.nonClinics}
