@@ -3,6 +3,7 @@ import Header from './Header';
 import SearchBox from './SearchBox';
 import NonClinicMap from './NonClinicMap';
 import CenterDetails from './CenterDetails';
+import Map from './Map';
 
 class WomensHealthApp extends React.Component {
   state = {
@@ -29,7 +30,7 @@ class WomensHealthApp extends React.Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/non_clinics/AL').then(results => {
+    fetch('http://localhost:3000/api/v1/non_clinics').then(results => {
         return results.json();
     }).then(data => {
       let nonClinics = data;
@@ -45,12 +46,7 @@ class WomensHealthApp extends React.Component {
         {
           this.state.isOpen && <CenterDetails infoIndex={this.state.infoIndex}/>
         }
-        <NonClinicMap 
-          isOpen={this.state.isOpen}
-          nonClinics={this.state.nonClinics}
-          infoIndex={this.state.infoIndex}
-          toggleInfo={this.toggleInfo}
-        />
+        <Map nonClinics={this.state.nonClinics}/>
       </div>
     );
   }

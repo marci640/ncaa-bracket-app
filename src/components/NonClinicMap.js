@@ -11,98 +11,86 @@ class NonClinicMap extends Component {
         defaultCenter = { { lat: 30.6878086, lng: -88.17402109999999 } }
         defaultZoom = { 8 }
         defaultOptions={{ styles:         
-          [
-              {
-                  "featureType": "water",
-                  "stylers": [
-                      {
-                          "visibility": "on"
-                      },
-                      {
-                          "color": "#b5cbe4"
-                      }
-                  ]
-              },
-              {
-                  "featureType": "landscape",
-                  "stylers": [
-                      {
-                          "color": "#efefef"
-                      }
-                  ]
-              },
-              {
-                  "featureType": "road.highway",
-                  "elementType": "geometry",
-                  "stylers": [
-                      {
-                          "color": "#83a5b0"
-                      }
-                  ]
-              },
-              {
-                  "featureType": "road.arterial",
-                  "elementType": "geometry",
-                  "stylers": [
-                      {
-                          "color": "#bdcdd3"
-                      }
-                  ]
-              },
-              {
-                  "featureType": "road.local",
-                  "elementType": "geometry",
-                  "stylers": [
-                      {
-                          "color": "#ffffff"
-                      }
-                  ]
-              },
-              {
-                  "featureType": "poi.park",
-                  "elementType": "geometry",
-                  "stylers": [
-                      {
-                          "color": "#e3eed3"
-                      }
-                  ]
-              },
-              {
-                  "featureType": "administrative",
-                  "stylers": [
-                      {
-                          "visibility": "on"
-                      },
-                      {
-                          "lightness": 33
-                      }
-                  ]
-              },
-              {
-                  "featureType": "road"
-              },
-              {
-                  "featureType": "poi.park",
-                  "elementType": "labels",
-                  "stylers": [
-                      {
-                          "visibility": "on"
-                      },
-                      {
-                          "lightness": 20
-                      }
-                  ]
-              },
-              {},
-              {
-                  "featureType": "road",
-                  "stylers": [
-                      {
-                          "lightness": 20
-                      }
-                  ]
-              }
-          ] }}
+[
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#444444"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f1dff1"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    }
+] }}
  
       >
         {this.props.nonClinics.map(clinic => (
@@ -111,8 +99,8 @@ class NonClinicMap extends Component {
             key={clinic.id}
             position= {{lat: parseFloat(clinic.lat), lng: parseFloat(clinic.long)}}
             options= {{
-                icon: new google.maps.MarkerImage('/../images/doctor-15.svg',
-    null, null, null, new google.maps.Size(40,40)),
+              icon: new google.maps.MarkerImage('/../images/' + clinic.medical_provider + '.svg',
+    null, null, null, new google.maps.Size(30,30)),
               
           }}
             onClick={() => { this.props.toggleInfo(clinic.id) } }
@@ -136,3 +124,10 @@ class NonClinicMap extends Component {
 };
 
 export default NonClinicMap;
+
+        // <NonClinicMap 
+        //   isOpen={this.state.isOpen}
+        //   nonClinics={this.state.nonClinics}
+        //   infoIndex={this.state.infoIndex}
+        //   toggleInfo={this.toggleInfo}
+        // />

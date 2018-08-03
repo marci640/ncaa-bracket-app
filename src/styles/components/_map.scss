@@ -1,0 +1,51 @@
+
+path {
+  pointer-events: all;
+  defaultFill: 20px, bold;
+}
+path:hover {
+  opacity: 0.50;
+  cursor: pointer;
+}
+
+.average, .savings {
+  width: 237px;
+  height: 140px;
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  right: 30px;
+  text-align: center;
+  font: bold 14px/16px "Open Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 6px 0px 0px #e6e6e6;
+  box-shadow: 0px 6px 0px 0px #e6e6e6;
+}
+
+.average span.price, .savings span.price {
+  font-size: 72px;
+  line-height: 96px;
+  display: block;
+}
+
+.average span.price { color: #c01212; }
+.savings span.price { color: #12c02b; }
+
+.average {
+  top: 175px;
+}
+
+.savings {
+  top: 356px;
+}
+
+.divider {
+  height: 36px;
+  width: 20px;
+  background: #e6e6e6;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  right: 138px;
+  bottom: 319px;
+}
