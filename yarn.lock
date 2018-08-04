@@ -4124,6 +4124,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+states-abbreviations@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/states-abbreviations/-/states-abbreviations-1.0.0.tgz#4b434fc055ea64a9ea9da243a575d3335aad6795"
+
 "statuses@>= 1.3.1 < 2", statuses@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"

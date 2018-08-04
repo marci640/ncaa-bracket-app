@@ -42,7 +42,6 @@ class WomensHealthApp extends React.Component {
     return (
       <div>
         <Header />
-        <SearchBox searchByLocation={this.searchByLocation} />
         {
           this.state.isOpen && <CenterDetails infoIndex={this.state.infoIndex}/>
         }

@@ -1,11 +1,24 @@
 
 path {
+  fill: #fff;
+  stroke: #D84765;
   pointer-events: all;
   defaultFill: 20px, bold;
 }
+
+USAMap {
+ width: 330;
+}
+
 path:hover {
-  opacity: 0.50;
+  fill: #D84765;
   cursor: pointer;
+}
+
+.baby {
+  width: 50px; 
+  margin-top: $s-size;
+  margin-bottom: 0; 
 }
 
 .average, .savings {
@@ -14,6 +27,7 @@ path:hover {
   background: #fff;
   border-radius: 4px;
   position: absolute;
+  padding: 5px; 
   right: 30px;
   text-align: center;
   font: bold 14px/16px "Open Sans", Arial, sans-serif;
@@ -23,13 +37,13 @@ path:hover {
 }
 
 .average span.price, .savings span.price {
-  font-size: 72px;
-  line-height: 96px;
+  font-size: 42px;
+  line-height: 42px;
   display: block;
 }
 
-.average span.price { color: #c01212; }
-.savings span.price { color: #12c02b; }
+.average span.price { color: #D84765; }
+.savings span.price { color: #355c7d; }
 
 .average {
   top: 175px;
@@ -37,15 +51,4 @@ path:hover {
 
 .savings {
   top: 356px;
-}
-
-.divider {
-  height: 36px;
-  width: 20px;
-  background: #e6e6e6;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  right: 138px;
-  bottom: 319px;
 }
