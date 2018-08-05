@@ -26,7 +26,7 @@ class Map extends Component {
       <div className="container">
           <div className="row">
             <div className="col-12 col-md-8 col-lg-8 float-left">
-              <USAMap width={this.state.width / 1.6} height="500" title="Abortion Clinics in the US"onClick={this.mapHandler} />
+              <USAMap width={this.state.width / 1.2} title="Abortion Clinics in the US"onClick={this.mapHandler} />
             </div>
           
             <div className="col-12 col-md-4 col-lg-4 float-right">
