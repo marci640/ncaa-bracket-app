@@ -2,12 +2,9 @@
 path {
   fill: #fff;
   stroke: #D84765;
+  stroke-width: 2;
   pointer-events: all;
   defaultFill: 20px, bold;
-}
-
-USAMap {
- width: 330;
 }
 
 path:hover {
@@ -15,40 +12,48 @@ path:hover {
   cursor: pointer;
 }
 
-.baby {
-  width: 50px; 
-  margin-top: $s-size;
-  margin-bottom: 0; 
+.credit {
+  position: fixed;
+  bottom: 5px;
+  color: #fff;
+  font-size: 9px;
 }
 
-.average, .savings {
-  width: 237px;
-  height: 140px;
+.credit a {
+  color: #fff;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .credit { display: none; }  
+}
+
+.icon {
+  width: 50px; 
+  margin-top: $s-size;
+  margin-bottom: 10px; 
+}
+
+.clinics, .non-clinics {
+  width: 250px;
+  height: 180px;
   background: #fff;
   border-radius: 4px;
-  position: absolute;
   padding: 5px; 
-  right: 30px;
+  padding-top: 15px; 
   text-align: center;
   font: bold 14px/16px "Open Sans", Arial, sans-serif;
   text-transform: uppercase;
   -webkit-box-shadow: 0px 6px 0px 0px #e6e6e6;
   box-shadow: 0px 6px 0px 0px #e6e6e6;
+  margin: 25px; 
 }
 
-.average span.price, .savings span.price {
+.clinics span.count, .non-clinics span.count {
   font-size: 42px;
   line-height: 42px;
   display: block;
+  padding-top: 10px; 
 }
 
-.average span.price { color: #D84765; }
-.savings span.price { color: #355c7d; }
-
-.average {
-  top: 175px;
-}
-
-.savings {
-  top: 356px;
-}
+.clinics span.count { color: #D84765; }
+.non-clinics span.count { color: #355c7d; }

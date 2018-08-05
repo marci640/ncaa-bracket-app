@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, MarkerCluster } from 'react-google-maps';
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 
-class NonClinicMap extends Component {
+class DetailedGoogleMap extends Component {
 
   render() {
  
@@ -93,7 +93,7 @@ class NonClinicMap extends Component {
 ] }}
  
       >
-        {this.props.nonClinics.map(clinic => (
+        {this.props.clinics.map(clinic => (
 
           <Marker
             key={clinic.id}
@@ -123,11 +123,11 @@ class NonClinicMap extends Component {
    }
 };
 
-export default NonClinicMap;
+export default DetailedGoogleMap;
 
-        // <NonClinicMap 
+        // <DetailedGoogleMap 
         //   isOpen={this.state.isOpen}
-        //   nonClinics={this.state.nonClinics}
+        //   clinics={this.state.clinics}
         //   infoIndex={this.state.infoIndex}
         //   toggleInfo={this.toggleInfo}
         // />

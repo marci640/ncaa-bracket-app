@@ -3,7 +3,9 @@
   color: #fff;
   margin-bottom: $m-size; 
   padding: $m-size 0;
+  margin-right: 0px; 
   border-bottom: 20px solid white; 
+  width: 100%; 
 }
 
 // block element modifier (BEM)
@@ -13,9 +15,9 @@
 }
 
 
-
 @media (min-width: 45rem) {
   .header {
-    margin-bottom: $xl-size
+    margin-bottom: 10px; 
+    width: 100%;
   }
 }

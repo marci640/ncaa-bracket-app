@@ -10,3 +10,7 @@ const CenterDetails = (props) => (
 );
 
 export default CenterDetails;
+
+// {
+//   this.state.isOpen && <CenterDetails infoIndex={this.state.infoIndex}/>
+// }
