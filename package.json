@@ -10,7 +10,7 @@
     "serve": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "start": "node app.js"
+    "start": "node server.js"
   },
 
   "dependencies": {
