@@ -8,7 +8,7 @@ class Map extends Component {
     abortionClinic: 633,
     fakeClinic: 4146,
     currentState: "the US",
-    width: window.innerHeight
+    width: window.innerwidth
   }
 
   mapHandler = (event) => {
