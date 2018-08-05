@@ -8,7 +8,8 @@ class Map extends Component {
     abortionClinic: 633,
     fakeClinic: 4146,
     currentState: "the US",
-    width: window.innerwidth
+    width: window.innerwidth,
+    height: window.innerheight
   }
 
   mapHandler = (event) => {
@@ -25,11 +26,11 @@ class Map extends Component {
     return (
       <div className="container">
           <div className="row">
-            <div className="col-12 col-md-8 col-lg-8 float-left">
-              <USAMap width={this.state.width / 1.2} title="Abortion Clinics in the US"onClick={this.mapHandler} />
+            <div className="col-12 col-md-8 col-lg-8">
+              <USAMap className="usaMap" width={this.state.width / 1.2} height={this.state.height/2} title="Abortion Clinics in the US"onClick={this.mapHandler} />
             </div>
           
-            <div className="col-12 col-md-4 col-lg-4 float-right">
+            <div className="col-12 col-md-4 col-lg-4 center-block">
               <div className="clinics"> 
                 <img className="icon" src="/../images/gyn.svg" /> 
                 <br/>

@@ -27,6 +27,12 @@ path:hover {
   .credit { display: none; }  
 }
 
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .clinics, .non-clinics { 
+    margin: 0 auto;
+  }  
+}
+
 .icon {
   width: 50px; 
   margin-top: $s-size;
