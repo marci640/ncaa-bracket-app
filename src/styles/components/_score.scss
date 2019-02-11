@@ -1,0 +1,22 @@
+.score_section {
+  background: white; 
+  margin-bottom: $m-size; 
+  padding: $m-size 0;
+  margin-right: 0px; 
+  border-bottom: 50px solid white; 
+  width: 100%; 
+}
+
+@media (min-width: 45rem) {
+  .score_section {
+    margin-bottom: 10px; 
+    width: 100%;
+  }
+}
+
+.current_score {
+  font-size: $l-size;
+  text-align: center; 
+  font-weight: bold;
+  color: #083863;
+}

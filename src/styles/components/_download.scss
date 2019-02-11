@@ -1,0 +1,43 @@
+body {
+  background: #fedb41;
+}
+
+@media (min-width: 45rem) {
+  .container {
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    width: 100%;
+  }
+}
+
+.icon {
+  width: 80px; 
+  margin-top: $s-size;
+  margin-bottom: 10px; 
+}
+
+.clinics, .non-clinics {
+  width: 450px;
+  height: 180px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 5px; 
+  padding-top: 30px; 
+  text-align: center;
+  font: bold 18px "Open Sans", Arial, sans-serif;
+  -webkit-box-shadow: 0px 6px 0px 0px #e6e6e6;
+  box-shadow: 0px 6px 0px 0px #e6e6e6;
+  margin: 25px; 
+}
+
+
+.credit {
+  position: fixed;
+  bottom: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.credit a {
+  color: #fff;
+}

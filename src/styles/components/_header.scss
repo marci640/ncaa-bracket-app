@@ -1,5 +1,5 @@
 .header {
-  background: #D84765; 
+  background: #083863; 
   color: #fff;
   margin-bottom: $m-size; 
   padding: $m-size 0;
@@ -14,8 +14,7 @@
   text-align: center; 
 }
 
-
-@media (min-width: 45rem) {
+@media (min-width: 30rem) {
   .header {
     margin-bottom: 10px; 
     width: 100%;
