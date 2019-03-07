@@ -32,6 +32,53 @@ class BracketApp extends React.Component {
     var data = result.data;
     console.log(data);
     this.setState({bracket: data});
+    console.log(this.state.bracket)
+    this.calculateScore(this.state.bracket)
+  }
+
+  calculateScore = (bracket_data) => {
+    var points = 0
+
+    var second_round = []
+    var regional_semifinals = []
+    var regional_finals = []
+    var final_four = []
+    var national_championship = []
+    var winner = []
+
+    bracket_data.map( function(row) {
+      second_round.push(row[4], row[35])
+      regional_semifinals.push(row[7], row[32])
+      regional_finals.push(row[10], row[29])
+      final_four.push(row[13], row[26])
+      national_championship.push(row[14], row[22])
+      winner.push(row[17])
+    })
+
+    this.state.finalBracket.map( function(conference) {
+      conference.teams.map( function(team) {
+        if(team['second_round'] && second_round.includes(team.college_name)) {
+          points += 1
+        }
+        if(team['regional_semifinals'] && regional_semifinals.includes(team.college_name)) {
+          points += 2
+        }
+        if(team['regional_finals'] && regional_finals.includes(team.college_name)) {
+          points += 4
+        }
+        if(team['final_four'] && final_four.includes(team.college_name)) {
+          points += 8
+        }
+        if(team['national_championship'] && national_championship.includes(team.college_name)) {
+          points += 16
+        }
+        if(team['winner'] && winner.includes(team.college_name)) {
+          points += 32
+        } 
+      })
+    })
+    this.setState({score: points});
+    console.log(this.state.score)
   }
 
   componentDidMount() {
@@ -88,7 +135,7 @@ class BracketApp extends React.Component {
           </div>
         </div>
 
-        <Score />
+        <Score score={this.state.score} />
       </div>    
     );
   }
